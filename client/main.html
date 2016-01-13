@@ -1,0 +1,19 @@
+<head>
+  <title>DataViz</title>
+  <title>stars_data_viz</title>
+  <script src="vis.js"></script>
+</head>
+
+<body>
+</body>
+
+<!-- this is the main template used by iron:router to build the page -->
+<template name="ApplicationLayout">
+
+  {{> yield "header"}}
+  <div class="container">
+    {{> yield "main"}}
+  </div>
+</template>
+
+

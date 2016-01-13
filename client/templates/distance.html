@@ -1,0 +1,23 @@
+<template name="distance">
+    <div class="row">
+        <div class="col-md-6">
+            {{> song_viz_controls_distance}}
+            {{> song_feature_list}}
+        </div>
+
+        <div class="col-md-6">
+            {{> star_vizjs_distance}}
+              Max distance from the Earth (in light years)
+            {{> slider}}
+        </div>
+
+
+
+    </div>
+
+</template>
+
+<template name="slider">
+  <div id="slider"></div>
+  Current max distance is: {{sliderVal}}
+</template>

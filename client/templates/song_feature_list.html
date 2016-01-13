@@ -1,0 +1,23 @@
+<template name="song_feature_list">
+  <div>
+    <div class="highlighted">List of the stars with the value for the chosen property:</div>
+    <ul>
+      {{#each get_all_feature_values}}
+        <li>{{label}}: {{value}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="song_vizjs">
+  <div id="visjs"></div>
+</template>
+
+
+<template name="star_vizjs_distance">
+  <div id="visjs2"></div>
+</template>
+
+<template name="star_vizjs_color">
+  <div id="visjs"></div>
+</template>

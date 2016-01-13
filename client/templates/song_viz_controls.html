@@ -1,0 +1,98 @@
+<template name="song_viz_controls">
+  <form>
+    <!-- list of available single features -->
+    <div class="highlighted">First Select one of the stars'property:</div>
+
+    <div class="centered">
+      <select class="js-select-single-feature">
+        {{#each get_feature_names}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div>
+      <button class="btn js-show-blobs">blobs</button>
+    </div>
+    <div>
+      <button class="btn js-show-distance">Distance</button> Show the data in relation to the distance to the Earth (X axis = distance)
+    </div>
+    <div>
+      <button class="btn js-show-poscolor">Position and Color</button> Show the data in relation to position of the star. The data is shown as the dot color. Try to select the property colorb_v to see a nice result!
+    </div>
+  </form>
+</template>
+
+<template name="song_viz_controls_distance">
+  <form>
+    <!-- list of available single features -->
+    <div class="highlighted">First Select one of the stars'property:</div>
+
+    <div class="centered">
+      <select class="js-select-single-feature">
+        {{#each get_feature_names}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class="centered">
+      <button class="btn btn-info js-show-distance">Distance 2D Chart</button>
+    </div>
+    <div>
+      <p>Show the data in relation to the distance to the Earth (X axis = distance).</p>
+      <p>You can filter the data based on distance.</p>
+      <p style="color: red;">N.B.: There is a rendering issue with this vis.</p>
+      <p style="color: red;">Sometimes the data is not passed to the graph properly.</p>
+    </div>
+
+  </form>
+</template>
+
+<template name="song_viz_controls_poscolor">
+  <form>
+    <!-- list of available single features -->
+    <div class="highlighted">First Select one of the stars'property:</div>
+
+    <div class="centered">
+      <select class="js-select-single-feature">
+        {{#each get_feature_names}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+
+    <div class="centered">
+      <button class="btn btn-info js-show-poscolor">Position and Color 3D Chart</button>
+    </div>
+    <div>
+      <p>The position of the dot is the position of the star in the universe.</p>
+      <p>The data is shown as the dot color.</p>
+      <p>[Try to select the property colorb_v to see a nice result!]</p>
+    </div>
+  </form>
+</template>
+
+<template name="song_viz_controls_color">
+  <form>
+    <!-- list of available single features -->
+    <div class="highlighted">First Select one of the stars'property:</div>
+    <div class="centered">
+      <select class="js-select-single-feature">
+        {{#each get_feature_names}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="centered">
+      <select class="js-select-single-feature2">
+        {{#each get_feature_names}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="centered">
+      <button class="btn btn-info js-show-color">Filter by Color Bar Chart</button>
+      <p>Select 2 properties for the X and Y axis. Filter the results based on the star color.</p>
+    </div>
+  </form>
+</template>
